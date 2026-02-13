@@ -20,7 +20,7 @@ class VerifyRequest(BaseModel):
     duration: Optional[float] = None
 
 class VerifyResponse(BaseModel):
-    success: boolean
+    success: bool
     score_semantic: float
     score_human: float
     message: Optional[str] = None

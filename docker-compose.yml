@@ -7,8 +7,24 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app # Hot reload code
-      - ./backend/models:/app/models # Mount models so we can drop them in host
+      # Mount source code for hot reloading
+      - ./backend:/app
+      # Mount models directly from host
+      - ./backend/models:/app/models
     environment:
       - MODEL_DIR=/app/models
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: ./frontend
+    container_name: drawtcha-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      # Next.js calls this backend
+      # In browser (client-side), 'localhost' works if user is on same machine.
+      # For server-side rendering, we might need internal DNS, but for this MVP 
+      # client-side fetch to localhost:8000 is fine.
+      - NEXT_PUBLIC_API_URL=http://localhost:8000/api
+    depends_on:
+      - backend
