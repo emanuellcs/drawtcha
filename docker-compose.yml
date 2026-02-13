@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: drawtcha-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app # Hot reload code
+      - ./backend/models:/app/models # Mount models so we can drop them in host
+    environment:
+      - MODEL_DIR=/app/models
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

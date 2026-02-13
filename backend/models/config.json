@@ -1,0 +1,54 @@
+{
+  "classes": [
+    "apple",
+    "door",
+    "star",
+    "fish",
+    "car",
+    "tree",
+    "eye",
+    "ladder"
+  ],
+  "img_size": 28,
+  "max_seq_len": 100,
+  "rnn_features": [
+    "dx",
+    "dy",
+    "pen_lift"
+  ],
+  "dataset_root": "/kaggle/input/datasets/organizations/google/tinyquickdraw",
+  "files_by_class": {
+    "apple": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/apple.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/apple.npz"
+    },
+    "door": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/door.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/door.npz"
+    },
+    "star": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/star.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/star.npz"
+    },
+    "fish": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/fish.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/fish.npz"
+    },
+    "car": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/car.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/car.npz"
+    },
+    "tree": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/tree.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/tree.npz"
+    },
+    "eye": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/eye.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/eye.npz"
+    },
+    "ladder": {
+      "ndjson": "/kaggle/input/datasets/organizations/google/tinyquickdraw/quickdraw_simplified/ladder.ndjson",
+      "npz": "/kaggle/input/datasets/organizations/google/tinyquickdraw/sketches/sketches/ladder.npz"
+    }
+  }
+}
